@@ -5,11 +5,16 @@
 // \____|_| |_|\___/|_|  \___|\___/ \__, |_|  \__,_| .__/|_| |_|_|\___|          \____\___/ \__,_|\___(_)  \__,_|  \____|_|\___/|___/___/\__,_|_|   \__, |
 //                                  |___/          |_|                                                                                              |___/ 
 
-//GLOSSARY
+
+
+
 
 
 // <title> Act 1 </title>
 
+
+
+// ? text to speech — document.querySelector("#gsri_ok0.gsri_a").click()
 
 function Warning() {
     alert("'Theatrical' actions are not necessary to the performance piece. Avoid if at all possible.");
@@ -26,7 +31,7 @@ function Enter_the_stage (){
   document.getElementById("first").style.color = "black";
 };
 
-function Eliminate_or_minize (x) {
+function Eliminate_or_minimize (x) {
   x.style.fontSize = parseInt(x.style.fontSize) / 2 + 'pt'
 };
 
@@ -66,15 +71,14 @@ Texts[7]="as it seems to be.";
 
 
 function New_Sequence_or_Phrasing(){
-document.querySelector('#logocont').innerHTML=Texts[count];
+document.querySelector('.logo').innerHTML=Texts[count];
 count++;
 if(count==Texts.length){count='0';}
 setTimeout("New_Sequence_or_Phrasing()",delay*1000);
 
 
-document.querySelector("#logocont").style.width="1000px"
-document.querySelector("#logocont").style.width="1000px"
-document.querySelector("#logocont").style.fontSize="24pt"
+document.querySelector(".logo").style.width="1000px"
+document.querySelector(".logo").style.fontSize="26pt"
 }
 
 //onload= function() { Sequencing();}
@@ -121,15 +125,14 @@ document.querySelector(".r").style.marginTop= "60px";
 document.querySelector(".r").style.color = "#0404B4";
 };*/
 
-function  Indeterminancy(n) {
-
-var rannum= Math.floor(Math.random()*textarray3.length);
-// document.querySelector(".st").innerHTML=textarray2[rannum];
-var r =document.querySelector(".g:nth-child("+n+")"),
-  _Rm = r.querySelector(".iUh30");
-_Rm.innerHTML=textarray3[rannum];
-_Rm.style.fontSize="16t"
-};	
+// function  Indeterminancy(n) {
+// var rannum= Math.floor(Math.random()*textarray3.length);
+// // document.querySelector(".st").innerHTML=textarray2[rannum];
+// var r =document.querySelector(".g:nth-child("+n+")"),
+// _Rm = r.querySelector(".iUh30");
+// _Rm.innerHTML=textarray3[rannum];
+// _Rm.style.fontSize="16t"
+// };	
 
 /*var rannum= Math.floor(Math.random()*textarray3.length);
 document.querySelector("._Rm").innerHTML=textarray3[rannum];
@@ -157,7 +160,7 @@ function Juxtaposition_of_elements_under_aleatory_influence(n) {
 var rannum= Math.floor(Math.random()*textarray2.length);
 // document.querySelector(".st").innerHTML=textarray2[rannum];
 var r =document.querySelector(".g:nth-child("+n+")"),
-  st = r.querySelector(".st");
+st = r.querySelector(".st");
 st.innerHTML=textarray2[rannum];
 st.style.fontSize="16pt"
 st.style.marginTop = "40px";
@@ -170,7 +173,9 @@ st.style.marginTop = "40px";
 
 //onload = function() { Elements_of_Chance();}
 
-//document.querySelector(â€œ#mainâ€).innerHTML=""
+//document.querySelector(“#main”).innerHTML=""
+
+// NEW: o corpo obedece ao oxigénio.
 
 function leave_the_stage (n){
 
@@ -207,10 +212,14 @@ function Second_Act () {
   window.location.href = url;
   url.focus();
 }
-// document.querySelector(â€œhtmlâ€).style.backgroundColor = "white"
+// document.querySelector(“html”).style.backgroundColor = "white"
+
+
+
 
 
 // <title>Act 2</title>
+
 
 
  // - -  - - - - - -  - - - - -- - - - - - - - - - - - - - - - -   on google images:
@@ -232,16 +241,16 @@ function choreography_is_the_organization_of_tensions() {
 var delay="10"; //how many seconds
 var count='0';
 var Texts=new Array();
-Texts[0]="Counterclockwise";
+Texts[0]="Vicious Circle";
 Texts[1]="Sphere";
 Texts[2]="Spheres";
-Texts[4]="";
+Texts[4]="Sphere";
 Texts[5]="The private circle";
 Texts[6]="Public sphere";
 Texts[7]="The private circle";
 Texts[8]="";
 Texts[9]="Rotation";
-Texts[10]="";
+Texts[10]="Counterclockwise";
 Texts[11]="Spinning";
 Texts[12]="Spinning wheel";
 Texts[13]="Perpetual motion";
@@ -249,13 +258,33 @@ Texts[14]="";
 Texts[15]="Repeating itself ";
 Texts[16]="Geometry of time";
 
-    function perpetual_motion(){
-        document.querySelector('#lst-ib').value = Texts[count]; //or: #searchboxinput
+function breathe (){
+        document.querySelector('.gLFyf.gsfi').value = Texts[count]; 
         count++;
         if(count==Texts.length){count='0';}
-        setTimeout("perpetual_motion()",delay*800);
+        setTimeout("breathe()",delay*800);
+} 
+// setInterval("breathe()",1600)
+
+
+    function rotate () {
+    var centro = document.querySelector("body"),
+    deg = 10;
+    des_centro = setInterval(function() {
+    centro.style.transform = "rotateY(" + deg + "deg)";
+    deg = (deg + 10) % 360
+    }, 80); 
     } 
-    // setInterval("perpetual_motion()",1600)
+
+//rotate ()
+
+
+    function pause () {
+    clearInterval(des_centro);
+    } 
+
+// pause ()   
+    
 
  // - -  - - - - - -  - - - - -- - - - - - - - - - - - - - - - -   
 
@@ -556,6 +585,20 @@ function pageScroll() {
 pageScroll();
 //parar na console: clearTimeout(scrolldelay)
 
+
+// todo o Lado:::::
+
+var xMax, yMax, xNeg=1, yNeg=0;
+
+function pageScroll() {
+    window.scrollBy(5 * xNeg, 5 * yNeg);
+    if(xMax == window.scrollX)xNeg = xNeg * -1;
+    if(yMax == window.scrollY)yNeg = xNeg * 1;
+    scrolldelay = setTimeout(pageScroll,100);
+    console.log(window.scrollY);
+    xMax = window.scrollX;
+    yMax = window.scrollY;
+}
+pageScroll();
+
 document.querySelector(".srg").style.transform="rotate(180deg)"
-
-
