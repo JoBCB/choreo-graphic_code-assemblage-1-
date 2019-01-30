@@ -1,6 +1,9 @@
-//new vocabulary: 
-//Auxologic; Weight; Height; Proportions; Units; Body Index; Spacing
-//Geometrised; Geometric_bias; Topographical_uncertainty;
+// https://github.com/JoBCB/choreo-graphic_code-assemblage-1-
+
+
+// New vocabulary: 
+// Auxologic; Weight; Height; Proportions; Units; Body Index; Spacing
+// Geometrised; Geometric_bias; Topographical_uncertainty;
 
 // Anthropometry (from Greek ἄνθρωπος anthropos, 'human', and μέτρον metron, 'measure') 
 // refers to the measurement of the human individual.
@@ -15,13 +18,16 @@
 // http://bl.ocks.org/wilson428/5471336
 // https://codepen.io/div/pen/HwIvk
 
+
+// notes on physical movement: BODY POSITIONS - my body. 
+
 // start screen: 50% 50% chance of visiting a webpage? https://www.w3schools.com/js/tryit.asp?filename=tryjs_randomlink
 // search term
 
 // - - - - - - - - - - - - - - - - - - on google:
 
 
-document.querySelector("body").style.filter=“grayscale(100%)”; 
+document.querySelector("body").style.filter="grayscale(100%)"; 
 
 document.querySelector("#logo").style.transition= "4s left cubic-bezier(1,0,1,1)";
 document.querySelector("#logo").style.left="calc(100% - 100px)";
@@ -57,16 +63,18 @@ document.querySelector("body").style.opacity="0.1";
 
 document.querySelector("#body").style.transform="skewX(20deg)";
 document.querySelector("#body").style.transform="matrix(1.0,2.0,3.0,4.0,5.0,6.0)";
+document.querySelector("#gsr").style.transform= "matrix3d(1, 0, 0, 0, 1.02, 1.02, 0, 0.0019, 0, 0, 1, 0, 0, 0, 0, 1)";}
+
 
 // augment scale of elements;
 
-function inhale() {
+function Inhale() {
     document.querySelector("body").style.transform="scale(0.2)"};
 
-function exhale() {
+function Exhale() {
     document.querySelector("body").style.transform="scale(4)"}; 
 
-function breathing () { 
+function Breathing () { 
     
     if (document.querySelector("body").style.transform=="scale(1)") {
         	(document.querySelector("body").style.transform="scale(4)")
@@ -75,12 +83,12 @@ function breathing () {
         }
 }
 
-setInterval("breathin()",800)
+setInterval("Breathing()",800)
 
 
 // translate;
 
-function moving () { 
+function Moving () { 
     
     if (document.querySelector("body").style.transform=="translate(0)") {
         	(document.querySelector("body").style.transform="translate(100)")
@@ -92,7 +100,7 @@ function moving () {
 setInterval("moving()",800)
 
 
-function  neutral (x) {
+function  Neutral (x) {
     var str = document.getElementById(x).innerHTML; 
     var res = str.replace(/center/gi, "NEUTRALISING");
     document.getElementById(x).innerHTML = res;
@@ -104,9 +112,9 @@ function  neutral (x) {
 var delay="10"; //how many seconds
 var count='0';
 var Texts=new Array();
-Texts[0]="I dreamed that I was balancing on the edge of a pit.";
-Texts[1]="In my dancing I was balancing from orbit to orbit.";
-Texts[2]="Or, rather, in decentering and deconstructing the - us.";
+Texts[0]="";
+Texts[1]="Inner body";
+Texts[2]="";
 Texts[4]="I dreamed that I was balancing in the edge of a pit";
 Texts[5]="What if it takes sensing the abyss, the edges of the limits of - inclusion - and - exclusion - before the binary of inside — outside, inclusion — exclusion.";
 Texts[6]="...the edges of the limits of";
@@ -123,8 +131,8 @@ Texts[16]="Circular, correr de boca em boca.";
 Texts[17]="Correr de boca em boca.";
 Texts[18]="Que volta ao ponto de que partiu.";
 
-function centrifugal_or_other_forces(){
-        document.querySelector('#text01').innerHTML = Texts[count]; //or: #searchboxinput
+function Topographical_Uncertainty(){
+        document.querySelector('#').innerHTML = Texts[count]; //or: #searchboxinput
         count++;
         if(count==Texts.length){count='0';}
         setTimeout("centrifugal_or_other_forces()",delay*800);
@@ -136,7 +144,7 @@ function perimeter () {document.querySelector("body").style.background="radial-g
 
 var xMax, yMax, xNeg=0, yNeg=1;
 
-function circulation_of_affects () {
+function Walk_the_Distance(){
     window.scrollBy(5 * xNeg, 5 * yNeg);
     if(xMax == window.scrollX)xNeg = xNeg * 1;
     if(yMax == window.scrollY)yNeg = xNeg * -1;
@@ -150,21 +158,35 @@ function circulation_of_affects () {
 window.scroll(0, 1000);
 window.scrollByLines(15); 
 
+// - - - - - JS set interval = miliseconds
+// - - - - - CSS Relative Lengths: 
+// em (font size); 
+// ex (to the x-height of the current font ); 
+// ch (relative to width of the "0" (zero));
+// rem (relative to font-size of the root element);
+// vw vh (viewport);
+// % (relative to the parent element);
 
+// - - - - - CSS Absolute Lengths
+// cm; mm; in; ox; pt; pc (picas 1pc = 12 pt):
 
-
-//math random for line thickness
-
-var elements = document.getElementsByClassName("r");
-function random () {
-
-for (i=0; i<elements.length; i++) {
-    elements[i].style.width = Math.floor(Math.random() * 10) + '%';
-	elements[i].style.borderWidth = Math.floor(Math.random() * 10) + 'px';
-	}
-}				
-random ()
-
+// 0.01 m = 37.7952755906 pixel 
+// 0.1 m =  377.9527559055 pixel 
+// 1 m = 3779.5275590551 pixel --- 1 m = 3779.527559 px; 1 px = 0.000265 m 
+// 5 m = 18897.637795276 pixel 
+// 10 m = 37795.275590551 pixel --- 10 meter  =  37795.275593 pixel 
+// 50 m = 188976.37795276 pixel --- 50 meter  =  188976.377967 pixel
+// 100 m = 377952.75590551 pixel --- 100 meter  =  377952.755933 pixel
+// 1000 m = 3779527.5590551 pixel 
+// 1 meter [m] =39.370079 
+// = inches / = 3.28084 
+// 1m = 3ft 3.370079inches / 3.28083989501 feet / foot -- 196.850394 foot/ minute -- 11811.02364 foot/hour
+// 0.001 meter/milisecond -- 59.999999 meter/minute
+// = 2834.64576 points /= 9.842521 hand / = 8.748908 (cloth)
+// = 4.97097 link (usually abbreviated as "l.", "li." or "lnk.")
+// a unit of length formerly used in many English-speaking countries. 
+// 1 link ≈ 201.167 652 millimetres (based on the pre-1959 imperial foot) 
+// a link is exactly ​66⁄100 of a foot,[1] or exactly 7.92 inches or 20.1168 cm. 
 
 colors = new Array("#000000 ", "#101010 ","#202020 ", "#282828 ","#303030" ,"#383838  ", "#404040 ", "#484848 ","#585858 " ,"#505050 ", "#606060 ","#686868 ", "#787878 ",  "#888888 ", "#989898 ", "#A0A0A0 ", "#A8A8A8 ","#C0C0C0 ", "#B0B0B0 ", "#F0F0F0 "," #D8D8D8 ", "#F0F0F0 ","#FFFFFF ","#D0D0D0", " #181818 ", "#909090 ")
 
@@ -187,6 +209,17 @@ r.style.borderRadius="50%";
 //setInterval("Pulse(1)",1000)
 
 
+var elements = document.getElementsByClassName("r");
+function Random () {
+
+for (i=0; i<elements.length; i++) {
+    elements[i].style.width = Math.floor(Math.random() * 10) + '%';
+    elements[i].style.borderWidth = Math.floor(Math.random() * 10) + 'px';
+    }
+}               
+setInterval("Random ()", 600)
+
+
 function Spacing(n) {
 var r =document.querySelector(".g:nth-child("+n+")"),
 st = r.querySelector(".s");
@@ -202,9 +235,6 @@ st.style.borderRadius="50%";
 // Spacing(30)
 
 
-function walk_the_distance() { 
-document.querySelector("#gsr").style.transform= "matrix3d(1, 0, 0, 0, 1.02, 1.02, 0, 0.0019, 0, 0, 1, 0, 0, 0, 0, 1)";}
-walk_the_distance()
 
 // grid floor walking / pattern making
 
@@ -226,7 +256,7 @@ t.style.transform="skew(-10deg, -25deg)"
 // collumns and rows
 
 
-function offstage () {
+function Off_Stage () {
     //document.querySelector("html").style.backgroundColor="black";   
 	document.body.innerHTML = '';
 	document.head.innerHTML = '';
@@ -235,4 +265,4 @@ function offstage () {
 // - - - - - - - - - - - - - - - - - - on maps:
 
 // https://www.w3schools.com/graphics/google_maps_overlays.asp
-
+// https://jobcb.github.io/choreography_edit_distances.html
