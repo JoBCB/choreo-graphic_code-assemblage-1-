@@ -1,4 +1,4 @@
-# choreo-graphic_code-assemblage-1-
+# choreo-graphic_code:assemblage
 This code was built for a live performance first premiered at V2_Institute of Unstable Media in Rotterdam (online/installation version here: http://pzwart1.wdka.hro.nl/~jo/notebook/series/glossary.html)
 Since then live coding performances and the "choreographic vocabulary" has been expanding. 
 Find here a list of resources and references that best help contextualize the research project: https://github.com/JoBCB/Integrated_Digital_Media_NYU/wiki/References
