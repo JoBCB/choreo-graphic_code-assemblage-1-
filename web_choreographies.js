@@ -4,6 +4,7 @@
 // New vocabulary: 
 // Auxologic; Weight; Height; Proportions; Units; Body Index; Spacing
 // Geometrised; Geometric_bias; Topographical_uncertainty;
+// Configure /Figuring / 
 
 // Anthropometry (from Greek ἄνθρωπος anthropos, 'human', and μέτρον metron, 'measure') 
 // refers to the measurement of the human individual.
@@ -109,27 +110,28 @@ function  Neutral (x) {
 
 
 
-var delay="10"; //how many seconds
+var delay="10"; 
 var count='0';
 var Texts=new Array();
-Texts[0]="";
-Texts[1]="Inner body";
+//excercepts from choreographer Moriah Evans
+Texts[0]="About the body";
+Texts[1]="and about what dance can be or is.";
 Texts[2]="";
-Texts[4]="I dreamed that I was balancing in the edge of a pit";
-Texts[5]="What if it takes sensing the abyss, the edges of the limits of - inclusion - and - exclusion - before the binary of inside — outside, inclusion — exclusion.";
-Texts[6]="...the edges of the limits of";
-Texts[7]="If the exclusivity of the bubble is a lyric motif, the inclusivity of the web is an epic one.";
-Texts[8]="When I awoke it seemed that I could have simply lowered my centre of balance.";
-Texts[9]="...my centre of — balance.";
-Texts[10]="I dreamed that I was balancing on the edge of a...";
-Texts[11]="De volta ao ponto de que partiu.";
-Texts[12]="Cyclical";
-Texts[13]="The private circle; the public sphere. Spheres.";
-Texts[14]="Circulation of affects";
-Texts[15]="Micro - macro circulation";
-Texts[16]="Circular, correr de boca em boca.";
-Texts[17]="Correr de boca em boca.";
-Texts[18]="Que volta ao ponto de que partiu.";
+Texts[4]="The boundaries of the body,";
+Texts[5]="the edges of the limits of - inclusion - and - exclusion";
+Texts[6]="before the binary of inside.";
+Texts[7]="Contained, continuum. Corporeal.";
+Texts[8]="Passed from body to body.";
+Texts[9]="";
+Texts[10]="Let’s move beyond identifiable dance forms.";
+Texts[11]="Dance can invent what a body can do";
+Texts[12]="Does your uterus move your pelvis versus your pelvis moving your uterus?";
+Texts[13]="Movement passing through their spines, like a spiral.";
+Texts[14]="Dancing bodies";
+Texts[15]="Dancing bodies";
+Texts[16]="Emergent bodies";
+Texts[17]="or disobedient bodies.";
+Texts[18]="The reactivation of the social body is a political project that begins with dancing."
 
 function Topographical_Uncertainty(){
         document.querySelector('#').innerHTML = Texts[count]; //or: #searchboxinput
@@ -139,7 +141,7 @@ function Topographical_Uncertainty(){
 } 
 
 
-function perimeter () {document.querySelector("body").style.background="radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%)"}
+function Perimeter () {document.querySelector("body").style.background="radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%)"}
 
 
 var xMax, yMax, xNeg=0, yNeg=1;
@@ -154,6 +156,8 @@ function Walk_the_Distance(){
     yMax = window.scrollY;
 }
 // parar na console: clearTimeout(scrolldelay)
+
+//My dance is my walking.
 
 window.scroll(0, 1000);
 window.scrollByLines(15); 
