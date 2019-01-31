@@ -1,13 +1,17 @@
 // https://github.com/JoBCB/choreo-graphic_code-assemblage-1-
-
+// change back settings: about:addons + shared internet;
 
 // New vocabulary: 
 // Auxologic; Weight; Height; Proportions; Units; Body Index; Spacing
 // Geometrised; Geometric_bias; Topographical_uncertainty;
-// Configure /Figuring / 
+// Configure /Figuring 
+
+// blobs / virus;
 
 // Anthropometry (from Greek ἄνθρωπος anthropos, 'human', and μέτρον metron, 'measure') 
 // refers to the measurement of the human individual.
+
+// see Henry Dreyfuss and Neufert;
 
 // revise units;
 // "which is more than one, and more than two, but less than infinity.
@@ -19,22 +23,40 @@
 // http://bl.ocks.org/wilson428/5471336
 // https://codepen.io/div/pen/HwIvk
 
+// notes on scenography: microphone hanging in space; 
+// double projection: having the 'glossary' in another part of the space
+// Two projectors and screen/ empty wall; HDMI cables to connect to laptops;
+// Microphone on stand; Loudspeakers; Access to Wi-fi (strong connection);
+// Pedestal; foam sofas;
+
 
 // notes on physical movement: BODY POSITIONS - my body. 
 
+// print: instructions for walking;
+
+
+
 // start screen: 50% 50% chance of visiting a webpage? https://www.w3schools.com/js/tryit.asp?filename=tryjs_randomlink
-// search term
+// search term: from body to body
 
 // - - - - - - - - - - - - - - - - - - on google:
 
 
 document.querySelector("body").style.filter="grayscale(100%)"; 
+document.querySelector("#taw").remove()
 
 document.querySelector("#logo").style.transition= "4s left cubic-bezier(1,0,1,1)";
 document.querySelector("#logo").style.left="calc(100% - 100px)";
 
-document.getElementsByTagName("H1")[0].removeAttribute("class"); 
-document.getElementById("myAnchor").removeAttribute("href"); 
+document.getElementsByTagName("h3")[1].remove() 
+document.querySelectorAll("h3")[3].style.background="pink";
+
+document.querySelectorAll("[data-jip-unity-id" + "='" + "dc" + "']")[0].style.background="pink";
+document.body.setAttribute("follow", "false"); // if set true jip can scroll
+
+document.querySelector("body").style.transform="rotate(90deg)";
+
+document.querySelector(".LC20lb").removeAttribute("href"); 
 
 
 document.querySelector("body").style.writingMode="vertical-lr";
@@ -50,20 +72,20 @@ document.querySelector("body").style.alignItems="flex-start";
 document.querySelector("#ires").style.transform="rotateZ(10deg)";
 
 
-document.querySelector("html").style.background="conic-gradient(#fff 0%, #000 100%)";
+document.querySelector("body").style.background="linear-gradient(blue 0%, pink 50%, white 100%)";
 document.querySelector("body").style.backgroundBlendMode="screen";
 
-document.querySelector("#body").style.backgroundImage="url(https://upload.wikimedia.org/wikipedia/commons/c/c0/Computer_Workstation_Variables_cleanup.png)";
+document.querySelector("body").style.backgroundImage="url(https://upload.wikimedia.org/wikipedia/commons/c/c0/Computer_Workstation_Variables_cleanup.png)";
 document.querySelector("#main").style.backgroundBlendMode="multiply";
 
-document.querySelector("#body").style.backgroundRepeat="repeat";
-document.querySelector("#body").style.backgroundRepeat="repeat space";
-document.querySelector("#body").style.backgroundRepeat="round space";
+document.querySelector("body").style.backgroundRepeat="repeat";
+document.querySelector("body").style.backgroundRepeat="repeat space";
+document.querySelector("body").style.backgroundRepeat="round space";
 
 document.querySelector("body").style.opacity="0.1";
 
-document.querySelector("#body").style.transform="skewX(20deg)";
-document.querySelector("#body").style.transform="matrix(1.0,2.0,3.0,4.0,5.0,6.0)";
+document.querySelector("body").style.transform="skewX(20deg)";
+document.querySelector("body").style.transform="matrix(1.0,2.0,3.0,4.0,5.0,6.0)";
 document.querySelector("#gsr").style.transform= "matrix3d(1, 0, 0, 0, 1.02, 1.02, 0, 0.0019, 0, 0, 1, 0, 0, 0, 0, 1)";}
 
 
@@ -89,16 +111,18 @@ setInterval("Breathing()",800)
 
 // translate;
 
+document.querySelector("body").style.transform="scale(0.2)"
+
 function Moving () { 
     
-    if (document.querySelector("body").style.transform=="translate(0)") {
-        	(document.querySelector("body").style.transform="translate(100)")
+    if (document.querySelector("body").style.transform=="translate(0cm)") {
+        	(document.querySelector("body").style.transform="translate(10cm)")
         }
-    else  { (document.querySelector("body").style.transform="translate(500)") 
+    else  { (document.querySelector("body").style.transform="translate(0cm)") 
         }
 }
 
-setInterval("moving()",800)
+setInterval("Moving()",800)
 
 
 function  Neutral (x) {
@@ -134,12 +158,12 @@ Texts[17]="or disobedient bodies.";
 Texts[18]="The reactivation of the social body is a political project that begins with dancing."
 
 function Topographical_Uncertainty(){
-        document.querySelector('#').innerHTML = Texts[count]; //or: #searchboxinput
+        document.querySelector('#logo').innerHTML = Texts[count]; //or: #searchboxinput
         count++;
         if(count==Texts.length){count='0';}
-        setTimeout("centrifugal_or_other_forces()",delay*800);
+        setTimeout("Topographical_Uncertainty()",delay*800);
 } 
-
+//Topographical_Uncertainty()
 
 function Perimeter () {document.querySelector("body").style.background="radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%)"}
 
@@ -150,7 +174,7 @@ function Walk_the_Distance(){
     window.scrollBy(5 * xNeg, 5 * yNeg);
     if(xMax == window.scrollX)xNeg = xNeg * 1;
     if(yMax == window.scrollY)yNeg = xNeg * -1;
-    scrolldelay = setTimeout(circulation_of_affects,100);
+    scrolldelay = setTimeout(Walk_the_Distance,60);
     console.log(window.scrollY);
     xMax = window.scrollX;
     yMax = window.scrollY;
@@ -217,8 +241,8 @@ var elements = document.getElementsByClassName("r");
 function Random () {
 
 for (i=0; i<elements.length; i++) {
-    elements[i].style.width = Math.floor(Math.random() * 10) + '%';
-    elements[i].style.borderWidth = Math.floor(Math.random() * 10) + 'px';
+    elements[i].style.width = Math.floor(Math.random() * 100) + '%';
+    elements[i].style.borderWidth = Math.floor(Math.random() * 1000) + 'px';
     }
 }               
 setInterval("Random ()", 600)
@@ -244,18 +268,18 @@ st.style.borderRadius="50%";
 
 function Turn(n) {
 var s =document.querySelector(".g:nth-child("+n+")"),
-s = s.querySelector(".s");
+s = s.querySelector(".r");
 s.style.transform="skew(10deg, 25deg)"
 };
-//turn(1)
+//Turn(1)
 
 
 function Re_turn(n) {
 var t =document.querySelector(".g:nth-child("+n+")"),
-t = t.querySelector(".s");
+t = t.querySelector(".r");
 t.style.transform="skew(-10deg, -25deg)"
 };
-//re_turn(1)
+//Re_turn(1)
 
 // collumns and rows
 
