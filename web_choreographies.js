@@ -1,27 +1,16 @@
 // https://github.com/JoBCB/choreo-graphic_code-assemblage-1-
 // change back settings: about:addons + shared internet;
+// start screen: 50% 50% chance of visiting a webpage? https://www.w3schools.com/js/tryit.asp?filename=tryjs_randomlink
+// search term: from body to body
 
 // New vocabulary: 
 // Auxologic; Weight; Height; Proportions; Units; Body Index; Spacing
 // Geometrised; Geometric_bias; Topographical_uncertainty;
-// Configure /Figuring 
-
-// blobs / virus;
-
+// "...which is more than one, and more than two, but less than infinity.
 // Anthropometry (from Greek ἄνθρωπος anthropos, 'human', and μέτρον metron, 'measure') 
-// refers to the measurement of the human individual.
-
-// see Henry Dreyfuss and Neufert;
-
-// revise units;
-// "which is more than one, and more than two, but less than infinity.
-// modulor; body measurement and proportions;
-
-// sound options: 
-// metronome: https://github.com/scottwhudson/metronome
-// downloaded file: https://dchaplinsky.github.io/metronome/
-// http://bl.ocks.org/wilson428/5471336
-// https://codepen.io/div/pen/HwIvk
+// Configure /Figuring; refer to the measurement of the human individual.
+// Henry Dreyfuss and Neufert;
+// modulor; body measurement and proportions; blobs / virus;
 
 // notes on scenography: microphone hanging in space; 
 // double projection: having the 'glossary' in another part of the space
@@ -29,15 +18,8 @@
 // Microphone on stand; Loudspeakers; Access to Wi-fi (strong connection);
 // Pedestal; foam sofas;
 
+// notes on physical movement: BODY POSITIONS. 
 
-// notes on physical movement: BODY POSITIONS - my body. 
-
-// print: instructions for walking;
-
-
-
-// start screen: 50% 50% chance of visiting a webpage? https://www.w3schools.com/js/tryit.asp?filename=tryjs_randomlink
-// search term: from body to body
 
 // - - - - - - - - - - - - - - - - - - on google:
 
@@ -289,8 +271,3 @@ function Off_Stage () {
 	document.body.innerHTML = '';
 	document.head.innerHTML = '';
 }
-
-// - - - - - - - - - - - - - - - - - - on maps:
-
-// https://www.w3schools.com/graphics/google_maps_overlays.asp
-// https://jobcb.github.io/choreography_edit_distances.html
