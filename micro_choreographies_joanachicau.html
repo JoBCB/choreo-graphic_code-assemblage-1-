@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Teatrise on search</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Live Coding Choreographies on Web Environments">
+    <meta name="keywords" content="design, media design, graphic design, choreography, physical, digital, web, live, creative coding, choreographic thinking, performance, Joana Chicau">
+    <meta name="author" content="Joana Chicau">
+
+<style type="text/css">
+
+body{
+  width: 100%;
+}
+
+#text {
+  position: absolute;
+  font-size: 200pt;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-left: 10%; 
+  margin-top: 5%; 
+}
+
+.stages{
+position: absolute;
+transform: skewY(30deg);
+}
+
+#stage01{
+margin-left: 70%;  
+width:80%;
+height: auto;
+animation: Breathe 6s ease-in-out infinite; 
+-webkit-animation: Breathe 15s infinite alternate; /* Safari 4+ */
+-moz-animation:    Breathe 15s infinite alternate; /* Fx 5+ */
+-o-animation:      Breathe 15s infinite alternate; /* Opera 12+ */
+animation:         Breathe 15s infinite alternate; /* IE 10+, Fx 29+ */  
+}
+
+#stage02{
+margin-left: 30%;
+width:80%;  
+height: auto;
+opacity: 0.6;
+animation: Breathe 6s ease-in-out infinite; 
+-webkit-animation: Breathe 5s infinite alternate; /* Safari 4+ */
+-moz-animation:    Breathe 5s infinite alternate; /* Fx 5+ */
+-o-animation:      Breathe 5s infinite alternate; /* Opera 12+ */
+animation:         Breathe 5s infinite alternate; /* IE 10+, Fx 29+ */  
+}
+
+#stage03{
+margin-left: 0%;
+width:80%; 
+height: auto;
+opacity: 0.3;
+animation: Breathe 6s ease-in-out infinite; 
+-webkit-animation: Breathe 2s infinite alternate; /* Safari 4+ */
+-moz-animation:    Breathe 2s infinite alternate; /* Fx 5+ */
+-o-animation:      Breathe 2s infinite alternate; /* Opera 12+ */
+animation:         Breathe 2s infinite alternate; /* IE 10+, Fx 29+ */   
+}
+
+.objectBreathe {
+animation: Breathe 6s ease-in-out infinite;	
+-webkit-animation: Breathe 5s infinite alternate; /* Safari 4+ */
+-moz-animation:    Breathe 5s infinite alternate; /* Fx 5+ */
+-o-animation:      Breathe 5s infinite alternate; /* Opera 12+ */
+animation:         Breathe 5s infinite alternate; /* IE 10+, Fx 29+ */   	
+}
+
+.color{
+	animation: colorchange 80s infinite; 
+    -webkit-animation: colorchange 80s infinite; 
+}
+
+
+.nocolor{
+	animation: none; 
+    -webkit-animation: none; 
+}
+
+
+.float{
+	animation: float 30s infinite; 
+    -webkit-animation: float 30s infinite; 
+}
+
+
+.notfloat{
+	animation: none; 
+    -webkit-animation: none; 
+}
+
+@keyframes colorchange
+    {
+      0%   {background: white;}
+      25%  {background: gray;}
+      50%  {background: blue;}
+      75%  {background: #ffccff;}
+      100% {background: gray;}
+    }
+
+@-webkit-keyframes colorchange
+    {
+      0%   {background: white;}
+      25%  {background: gray;}
+      50%  {background: blue;}
+      75%  {background: #ffccff;}
+      100% {background: gray;}
+    } 
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 5px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(100px);
+	}
+	75% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatex(100px);
+	}	
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+@-webkit-keyframes Breathe {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes Breathe {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes Breathe {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes Breathe {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+</style>
+
+<script type="text/javascript">
+	
+//teatrise on search; teatrise on search queries and other forms of movement. 
+
+var delay="10"; 
+var count='0';
+var Texts=new Array();
+Texts[0]="Choreography is ghostly";
+Texts[1]="its presence haunted by absence.";
+Texts[2]="Layers forming and dissolving";
+Texts[4]="scripting a network of relations";
+Texts[5]="like particles all in movement.";
+Texts[6]="The movement that manifests within and without the frame.";
+Texts[7]="";
+Texts[8]="Live performance emphasizes the agency of different elements,";
+Texts[9]="desires, orientations, inclinations, and intensities.";
+Texts[10]="Tools to observe ecosystems,";
+Texts[11]="practices of attention, listening .. breathing.";
+Texts[12]="Framing and scripting";
+Texts[13]="provoking new layouts, alternate relationalities,";
+Texts[14]="and constellations.";
+Texts[15]="Framing and dissolving, how many layers?";
+Texts[16]="";
+Texts[17]="Dance as movement of movements among different bodies,";
+Texts[18]="our bodies, our dances, ourselves.";
+Texts[19]="The body of the dancer becomes this ghostly matter.";
+
+function voicing (){
+        document.querySelector('#text').innerHTML = Texts[count]; 
+        count++;
+        if(count==Texts.length){count='0';}
+        setTimeout("breathe()",delay*800);
+} 
+// setInterval("voicing()",2000)
+
+
+function dissolving () {
+var myDiv = document.querySelector("html");
+  if (myDiv.className == 'color') {
+    myDiv.className = 'nocolor';
+  } else {
+    myDiv.className = 'color';
+  }
+}
+dissolving ()
+</script>
+</head>
+
+
+<body>
+
+<audio loop autoplay>
+  <source src="10-tmfhnbass_shibuya.mp3" type="audio/mpeg">
+</audio> 
+
+<div id="stage01" class="notfloat stages">
+    <iframe 
+    title="example"
+    width="100%"
+    height="900"
+    frameborder="0"
+    scrolling="yes"
+    margin="0"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.google.com/"
+    >
+</iframe>  
+</div>  
+
+<div id="stage02" class="notfloat stages">
+    <iframe 
+    title="example"
+    width="100%"
+    height="900"
+    frameborder="0"
+    scrolling="yes"
+    margin="0"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.google.com/"
+    >
+</iframe>  
+</div>  
+
+<div id="stage03" class="notfloat stages">
+    <iframe 
+    title="example"
+    width="100%"
+    height="900"
+    frameborder="0"
+    scrolling="yes"
+    margin="0"
+    marginheight="0"
+    marginwidth="0"
+    src="https://www.google.com/"
+    >
+</iframe>  
+</div>  
+
+<div id="text"></div>
+
+</body>
+</html>

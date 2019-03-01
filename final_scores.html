@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Choreographic code by Joana Chicau">
+  	<meta name="keywords" content="design, media design, graphic design, choreography, physical, digital, web, creative coding, choreographic thinking, performance  | Joana Chicau">
+  	<meta name="author" content="Joana Chicau">
+    <title>Choreo-Graphic Codes</title>
+
+
+<style type="text/css">
+    body{
+    margin: 55% 10% 5% 10%;
+    font-size: 12pt;
+    line-height: 14pt;
+    line-height: 20pt;
+    font-family: monospace;
+    color: #d9e7ff ;
+    background: linear-gradient(180deg, black, black 50%, black 10%, black, black 10%);    
+    }
+
+    #score{
+    width: 70% !important;
+    }
+
+</style>    
+</head>
+<body>
+
+<audio id="som" preload="auto" autoplay loop src="10-tmfhnbass_shibuya.mp3" type="audio/mp3"> </audio> 
+
+<p> <-- Teatrise on search queries & other forms of movement --> <br><br><br><br><br><br><br><br></p>
+
+<div id="score"></div>
+
+<script>
+
+// [1/6] a script in progress;
+// scorescapes; we create scores as modes of operation and communication.
+// ready-to-go scripts as hands-on instructions for moving or remaining still. 
+// scores or scripts that might operate as blueprints for the immediate.
+
+var xMax, yMax, xNeg=0, yNeg=1;
+
+function move() {
+    window.scrollBy(5 * xNeg, 5 * yNeg);
+    if(xMax == window.scrollX)xNeg = xNeg * 1;
+    if(yMax == window.scrollY)yNeg = xNeg * -1;
+    scrolldelay = setTimeout(move,120);
+    console.log(window.scrollY);
+    xMax = window.scrollX;
+    yMax = window.scrollY;
+}
+//move();
+
+</script>
+</body>
+</html>
+
